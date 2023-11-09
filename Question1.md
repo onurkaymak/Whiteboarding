@@ -13,8 +13,8 @@ Output: "Jasmine%20Ann%20Jones"
 ## Solution 1 with Recursion
 
 const urlConverter = (string, index = 0) => {
-if (index === string.length){
-    return "";
+if (index === string.length){  ///  This means that the function has checked the entire string, and it returns an empty string to end the recursion.
+    return ""; 
   } 
   
   if (string[index] === " ") {
