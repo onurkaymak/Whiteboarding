@@ -6,3 +6,22 @@ Example
 Input: "aaabccdddda"
 
 Output: "3ab2c4da"
+
+
+const stringCompressor = (string) => {
+  let compArr = [];
+  let count = 1;
+  let currChar
+
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === currChar) {
+      count ++;
+    } else {
+      if (count > 1){
+compArr.push(if );  
+      }
+      
+    }
+  }
+  return compArr;
+};
