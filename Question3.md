@@ -18,9 +18,8 @@ const stringCompressor = (string) => {
       count ++;
     } else {
       if (count > 1){
-compArr.push(if );  
-      }
-      
+  compArr.push(if );  
+      }    
     }
   }
   return compArr;
