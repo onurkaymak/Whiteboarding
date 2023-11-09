@@ -12,11 +12,14 @@ Output: "Jasmine%20Ann%20Jones"
 
 ## Solution 1 with Recursion
 
-const urlConverter = (string) => {
-if (string.split(" ").length === 1){
-    return string;
+const urlConverter = (string, index = 0) => {
+if (index === string.length){
+    return "";
+  } 
+  
+  if (string[index] === " ") {
+    return "%20" + urlConverter(string, index + 1);
   } else {
-    const indexNum = string.indexOf(" ");
-    string[indexNum] = "
+    return string[index] + urlConverter(string, index + 1);
   }
 }
