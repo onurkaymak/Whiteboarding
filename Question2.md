@@ -7,19 +7,15 @@ Input: [7, 9, "hi", 12, "hi", 7, 53]
 
 Output: [7, 9, "hi", 12, 53]
 
+## Solution 1 w/o Recursion
+
 const deduper = (array) => {
-  let newArr = [];
+  let newArr = []; 
 
-  for(let i = 0; i <= array.length; i++){
-    if (array[i] !== array[i + 1]) {
-      newArr.push(array[i]);
-    } else {
-      return
+  array.forEach((element) => { 
+    if(!newArr.includes(element)){
+      newArr.push(element);
     }
-    return newArr;
-  }
-}
-
-  array.map((element, index) => if (index) {
-
-  })
+  });
+  return newArr;
+};
