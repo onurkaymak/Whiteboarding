@@ -8,3 +8,15 @@ Example
 Input: "Jasmine Ann Jones"
 
 Output: "Jasmine%20Ann%20Jones"
+
+
+## Solution 1 with Recursion
+
+const urlConverter = (string) => {
+if (string.split(" ").length === 1){
+    return string;
+  } else {
+    const indexNum = string.indexOf(" ");
+    string[indexNum] = "
+  }
+}
