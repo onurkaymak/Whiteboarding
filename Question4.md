@@ -27,4 +27,21 @@ const isUnique = (string, index = 0) => {
   return bool;
 }
 
+## Solution 2 
+
+const isUnique = (string) => {
+  let charCount = {};
+
+  for (let i = 0; i < string.length; i++) {
+    let char = string[i];
+
+    if (charCount[char]) {
+      return false;
+    } else {
+      charCount[char] = 1;
+    }
+  }
+  return true;
+};
+
 
