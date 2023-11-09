@@ -7,19 +7,24 @@ Input: "aaabccdddda"
 
 Output: "3ab2c4da"
 
+// It only works for the first element
+## Solution 1 w/o Recursion (Unsolved) 
 
 const stringCompressor = (string) => {
   let compArr = [];
-  let count = 1;
-  let currChar;
+  let count = 0;
+  let currChar = string[0];
 
   for (let i = 0; i < string.length; i++) {
     if (string[i] === currChar) {
       count ++;
     } else {
       if (count > 1){
-  compArr.push(if );  
-      }    
+        compArr.push(count + currChar);
+        currChar = string[i];
+        count = 1;  
+      } 
+        compArr.push(currChar);  
     }
   }
   return compArr;
